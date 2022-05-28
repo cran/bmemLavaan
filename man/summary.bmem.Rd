@@ -38,6 +38,6 @@ y6 ~~ y8
 ind := a*b'
 
 fit_l <- bmem(data=PoliticalDemocracy, model = model_l, method='list',
-    ci='perc', boot=50, parallel = TRUE, ncore = 8)
+    ci='perc', boot=30, parallel = TRUE, ncore = 8)
 summary.bmem(fit_l)
 }

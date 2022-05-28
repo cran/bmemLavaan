@@ -324,20 +324,20 @@ power.basic<-function(model, nobs=100, nrep=1000, alpha=.95, skewness=NULL, kurt
   error <- 0
   while (error == 0){
     newdata<-try(simulateData(model,sample.nobs=nobs,skewness=0,kurtosis=0, ...))
-    if (class(newdata)!= "try-error") error <- 1
+    if (!inherits(newdata, "try-error")) error <- 1
   }
   
   if (ngroups > 1){
     error <- 0
     while (error == 0){
       temp.res<-try(lavaan::cfa(model, data=newdata, se=se, estimator=estimator, group='group', ...))
-      if (class(temp.res)!= "try-error") error <- 1
+      if (!inherits(temp.res, "try-error")) error <- 1
     }
   }else{
     error <- 0
     while (error == 0){
       temp.res<-try(lavaan::cfa(model, data=newdata, se=se, estimator=estimator, ...))
-      if (class(temp.res)!= "try-error") error <- 1
+      if (!inherits(temp.res, "try-error")) error <- 1
     }
   }
   par.value<-popPar(temp.res)
@@ -366,7 +366,7 @@ power.basic<-function(model, nobs=100, nrep=1000, alpha=.95, skewness=NULL, kurt
     error <- 0
     while (error == 0){
       newdata<-try(lavaan::simulateData(model,sample.nobs=nobs,skewness=skewness,kurtosis=kurtosis, ...)	)
-      if (class(newdata)!= "try-error") error <- 1
+      if (!inherits(newdata, "try-error")) error <- 1
     }
     
     ## Step 2: fit the model 		
@@ -378,7 +378,7 @@ power.basic<-function(model, nobs=100, nrep=1000, alpha=.95, skewness=NULL, kurt
     
     ## Step 3: Check significance
     
-    if (class(temp.res)!="try-error"){
+    if (!inherits(temp.res, "try-error")){
       temp.res.lavpartable <- lavaan::parTable(temp.res)
       idx <- 1:length( temp.res.lavpartable$lhs )
       temp.est<-temp.res.lavpartable$est[idx]
@@ -444,20 +444,20 @@ power.robust<-function(model, nobs=100, nrep=1000, alpha=.95, skewness=NULL, kur
   error <- 0
   while (error == 0){
     newdata<-try(simulateData(model,sample.nobs=nobs,skewness=0,kurtosis=0, ...))
-    if (class(newdata)!= "try-error") error <- 1
+    if (!inherits(newdata, "try-error")) error <- 1
   }
   
   if (ngroups > 1){
     error <- 0
     while (error == 0){
       temp.res<-try(lavaan::cfa(model, data=newdata, se=se, estimator=estimator, group='group', ...))
-      if (class(temp.res)!= "try-error") error <- 1
+      if (!inherits(temp.res, "try-error")) error <- 1
     }
   }else{
     error <- 0
     while (error == 0){
       temp.res<-try(lavaan::cfa(model, data=newdata, se=se, estimator=estimator, ...))
-      if (class(temp.res)!= "try-error") error <- 1
+      if (!inherits(temp.res, "try-error")) error <- 1
     }
   }
   par.value<-popPar(temp.res)
@@ -486,7 +486,7 @@ power.robust<-function(model, nobs=100, nrep=1000, alpha=.95, skewness=NULL, kur
     error <- 0
     while (error == 0){
       newdata<-try(lavaan::simulateData(model,sample.nobs=nobs,skewness=skewness,kurtosis=kurtosis, ...)	)
-      if (class(newdata)!= "try-error") error <- 1
+      if (!inherits(newdata, "try-error")) error <- 1
     }
     
     ## Step 2: fit the model 		
@@ -498,7 +498,7 @@ power.robust<-function(model, nobs=100, nrep=1000, alpha=.95, skewness=NULL, kur
     
     ## Step 3: Check significance
     
-    if (class(temp.res)!="try-error"){
+    if (!inherits(temp.res, "try-error")){
       temp.res.lavpartable <- lavaan::parTable(temp.res)
       idx <- 1:length( temp.res.lavpartable$lhs )
       temp.est<-temp.res.lavpartable$est[idx]
@@ -572,20 +572,20 @@ power.boot<-function(model, nobs=100, nrep=1000, nboot=1000, alpha=.95, skewness
   error <- 0
   while (error == 0){
     newdata<-try(simulateData(model,sample.nobs=nobs,skewness=0,kurtosis=0, ...))
-    if (class(newdata)!= "try-error") error <- 1
+    if (!inherits(newdata, "try-error")) error <- 1
   }
   
   if (ngroups > 1){
     error <- 0
     while (error == 0){
       temp.res<-try(lavaan::cfa(model, data=newdata, se=se, estimator=estimator, group='group', ...))
-      if (class(temp.res)!= "try-error") error <- 1
+      if (!inherits(temp.res, "try-error")) error <- 1
     }
   }else{
     error <- 0
     while (error == 0){
       temp.res<-try(lavaan::cfa(model, data=newdata, se=se, estimator=estimator, ...))
-      if (class(temp.res)!= "try-error") error <- 1
+      if (!inherits(temp.res, "try-error")) error <- 1
     }
   }
   temp.res.lavpartable <- parTable(temp.res)
@@ -654,7 +654,7 @@ power.boot<-function(model, nobs=100, nrep=1000, nboot=1000, alpha=.95, skewness
     error <- 0
     while (error == 0){
       newdata<-try(simulateData(model,sample.nobs=nobs,skewness=skewness,kurtosis=kurtosis, ...)	)
-      if (class(newdata)!= "try-error") error <- 1
+      if (!inherits(newdata, "try-error")) error <- 1
     }
     
     ## Step 2: fit the model 		
@@ -667,7 +667,7 @@ power.boot<-function(model, nobs=100, nrep=1000, nboot=1000, alpha=.95, skewness
     
     
     ## Step 3: Conduct bootstrap analysis
-    if (class(temp.res)!="try-error"){
+    if (!inherits(temp.res, "try-error")){
       orig.res<-coef.new(temp.res)
       if (boot.type=="default"){
         boot.res<-bootstrapLavaan(temp.res, FUN=coef.new, R=nboot, parallel=parallel_lavaan, ncpus=ncore,warn=FALSE, ...)
