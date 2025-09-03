@@ -24,7 +24,7 @@ bmem(data, model, v, method='list', ci='perc', cl=.95,
   \item{max_it}{Maximum number of iterations in EM}
   \item{parallel}{Whether to use parallel method to calculate.}
   \item{ncore}{Number of cores for parallel method.}
-  \item{\dots}{Other options for \code{\link{sem}} function can be used.}
+  \item{\dots}{Other options for \code{\link[lavaan]{sem}} function can be used.}
 }
 \details{
 The indirect effect can be specified using equations such as \code{a*b}, \code{a*b+c}, and \code{a*b*c+d*e+f}, which can be defined in 'model' parameter. }

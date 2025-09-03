@@ -17,7 +17,7 @@ ncore = 1, verbose=TRUE, ...)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{model}{
-A model specified using lavaan notation and above. See \code{\link{model.syntax}} for basic model specification. 
+A model specified using lavaan notation and above. See \code{\link[lavaan]{model.syntax}} for basic model specification. 
 
 For the power analysis, the population parameter values should be provided in the following way. For example, the coefficient between math and HE is .39. Then it is specified as start(.39). If the parameter will be referred in the mediation effect, a label should be given as a modifier as b*HE+start(.39)*HE.
 

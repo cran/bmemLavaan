@@ -5,7 +5,7 @@
 Organize the results into a table
 }
 \description{
-This function is adpated from the \code{\link{lavaan}} summary function to put the results in a table. 
+This function is adapted from the \code{\link[lavaan]{lavaan}} summary function to put the results in a table. 
 }
 \usage{
 \method{summary}{power}(object,...)

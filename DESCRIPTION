@@ -1,8 +1,8 @@
 Package: bmemLavaan
 Type: Package
 Title: Mediation Analysis with Missing Data and Non-Normal Data
-Version: 0.5
-Date: 2022-05-27
+Version: 0.6
+Date: 2025-09-02
 Authors@R: c(
 	person("Shuigen", "Ming", role = "aut", email = "msg0@mail.ustc.edu.cn"),
 	person("Hong", "Zhang", role = "aut", email = "zhangh@ustc.edu.cn"),
@@ -17,7 +17,6 @@ LazyData: true
 URL: https://bigdatalab.nd.edu
 ZipData: no
 NeedsCompilation: no
-Packaged: 2022-05-28 13:53:59 UTC; zzhang4
 Suggests: R.rsp
 VignetteBuilder: R.rsp
 Author: Shuigen Ming [aut],
@@ -25,6 +24,6 @@ Author: Shuigen Ming [aut],
   Zhiyong Zhang [aut, cre],
   Lijuan Wang [aut]
 Maintainer: Zhiyong Zhang <johnnyzhz@gmail.com>
-RoxygenNote: 7.1.2
+Packaged: 2025-09-03 18:30:27 UTC; zzhang4
 Repository: CRAN
-Date/Publication: 2022-05-28 14:40:06 UTC
+Date/Publication: 2025-09-03 19:00:12 UTC
