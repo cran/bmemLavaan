@@ -1,8 +1,8 @@
 Package: bmemLavaan
 Type: Package
 Title: Mediation Analysis with Missing Data and Non-Normal Data
-Version: 0.6
-Date: 2025-09-02
+Version: 0.7
+Date: 2026-02-02
 Authors@R: c(
 	person("Shuigen", "Ming", role = "aut", email = "msg0@mail.ustc.edu.cn"),
 	person("Hong", "Zhang", role = "aut", email = "zhangh@ustc.edu.cn"),
@@ -24,6 +24,6 @@ Author: Shuigen Ming [aut],
   Zhiyong Zhang [aut, cre],
   Lijuan Wang [aut]
 Maintainer: Zhiyong Zhang <johnnyzhz@gmail.com>
-Packaged: 2025-09-03 18:30:27 UTC; zzhang4
+Packaged: 2026-02-03 15:52:19 UTC; zzhang4
 Repository: CRAN
-Date/Publication: 2025-09-03 19:00:12 UTC
+Date/Publication: 2026-02-03 23:00:27 UTC

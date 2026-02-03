@@ -10,7 +10,7 @@ summary.power<-function(object, ...) {
   
   # main part: parameter estimates
   cat("Basic information:\n\n")
-  if(lavoptions$test %in% c("satorra.bentler", "yuan.bentler",
+  if(lavoptions$test[1] %in% c("satorra.bentler", "yuan.bentler",
                             "mean.var.adjusted",
                             "scaled.shifted") &&
      length(lavtest) > 1L) {

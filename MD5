@@ -1,12 +1,12 @@
-b04467cf5c90f6fda36e38f7400381ab *DESCRIPTION
+3a2dce5f0484596ddf6a2eecc6b9f364 *DESCRIPTION
 a243fc9703cd1c843ed3726ef72294c2 *NAMESPACE
 299f33619f66e344ac019b60f6b27b86 *R/bmem.R
 3047a2523c19001e8390de2eb80e3870 *R/data.R
-186f8e2169be83c028e867bf1b19a2b1 *R/power.R
-b54db8794555342c4feee5fe0b1b8f5b *build/partial.rdb
-47a982bb3f380d49d0438e4019b02c8e *build/vignette.rds
+0f49a4275f89c417b83b90130ad0ad85 *R/power.R
+d54042561b90aafd8a9a202ea63e1e4b *build/partial.rdb
+388a2ff61aa069b648d79e744f68e3b4 *build/vignette.rds
 5ec5100fb685fd24ec97fed2b9100f93 *data/Math.RData
-dfd08695d88af656b1b69b19b89432a7 *inst/doc/R_package-bmemLavaan_vignette.pdf
+d845035b6e3be42f4597e6eb5bd4de75 *inst/doc/R_package-bmemLavaan_vignette.pdf
 6521a4ef7da0f751196925277a24e262 *inst/doc/R_package-bmemLavaan_vignette.pdf.asis
 99f6e3850d60691154f49d515572f4fd *man/Math.Rd
 6021b84382676cc13ca8629204df4e9b *man/bmem.Rd
